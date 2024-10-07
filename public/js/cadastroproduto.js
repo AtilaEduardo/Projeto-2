@@ -5,6 +5,7 @@ ipcRenderer.send('get-produtos');
 
 ipcRenderer.on('get-produtos-reply', (event, produtos) => {
   const lista = document.getElementById('produtos-lista');
+  lista.innerHTML = ''; // Limpa a lista para evitar duplicação
   produtos.forEach(produto => {
     const item = document.createElement('li');
     item.textContent = `${produto.nome} - R$ ${produto.preco}`;
