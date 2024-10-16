@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Vendas</title>
+    <link rel="stylesheet" href="../public/css/salesStyle.css">
+</head>
+
+<body>
+    <header>
+        <h1>Minha Loja - Registro de Vendas</h1>
+        <nav>
+            <ul>
+                <li><a href="profileUser.html">Home</a></li>
+                <li><a href="sales.html">Vendas</a></li>
+                <li><a href="salesHistory.html">Histórico de Vendas</a></li>
+                <li><a href="support.html">Suporte</a></li>
+                <li><a href="settings.html">Atualizar Dados</a></li>
+                <li><a href="login.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="register-sales">
+            <h2>Registrar Venda Manualmente</h2>
+            <form id="salesForm">
+                <!-- Campo de busca de produto -->
+                <label for="searchProduct">Buscar Produto:</label>
+                <input type="text" id="searchProduct" placeholder="Digite o nome do produto">
+    
+                <!-- Lista de produtos adicionados -->
+                <div id="product-list"></div>
+    
+                <button type="button" id="addProduct">Adicionar Produto</button>
+    
+                <label for="totalPrice">Preço Total:</label>
+                <input type="number" id="totalPrice" name="totalPrice" readonly>
+    
+                <button type="submit">Registrar Venda</button>
+            </form>
+        </section>
+    </main>
+    <script src="../public/js/sales.js"></script>
+    
+</body>
+
+</html>

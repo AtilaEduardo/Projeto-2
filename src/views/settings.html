@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações do Usuário</title>
+    <link rel="stylesheet" href="../public/css/settingsStyle.css">
+</head>
+
+<body>
+    <header>
+        <h1>Configurações da Conta</h1>
+        <nav>
+            <ul>
+                <li><a href="profileUser.html">Home</a></li>
+                <li><a href="sales.html">Vendas</a></li>
+                <li><a href="salesHistory.html">Histórico de Vendas</a></li>
+                <li><a href="support.html">Suporte</a></li>
+                <li><a href="settings.html">Atualizar Dados</a></li>
+                <li><a href="login.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="configuracoes-usuario">
+            <h2>Alterar Dados da Empresa</h2>
+            <form id="userConfigForm">
+                <label for="nameUser">Nome de Usuário:</label>
+                <input type="text" id="nameUser" name="nameUser" value="<%= nameUser %>" required>
+
+                <label for="companyName">Razão Social:</label>
+                <input type="text" id="companyName" name="companyName" value="<%= companyName %>" required>
+
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" value="<%= cnpj %>" required oninput="mascaraCNPJ(this)">
+
+                <label for="telephone">Telefone:</label>
+                <input type="text" id="telephone" name="telephone" maxlength="16" placeholder="(00)00000-0000"
+                    value="<%= telephone %>" required oninput="mascaraTelefone(this)">
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000" value="<%= cep %>" required
+                    oninput="mascaraCEP(this)">
+
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" value="<%= address %>" required>
+
+                <label for="neighborhood">Bairro:</label>
+                <input type="text" id="neighborhood" name="neighborhood" value="<%= neighborhood %>" required>
+
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="city" value="<%= city %>" required>
+
+                <label for="uf">UF:</label>
+                <input type="text" id="uf" name="uf" value="<%= uf %>" required>
+
+                <label for="password">Senha (opcional):</label>
+                <input type="password" id="password" name="password">
+
+                <input type="hidden" id="userId" name="userId" value="<%= userId %>">
+
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </section>
+    </main>
+    <script src="../public/js/RegisterUserMaks.js"></script>
+    <script src="../public/js/settingsScript.js"></script>
+</body>
+
+</html>

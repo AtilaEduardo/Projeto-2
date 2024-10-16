@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../../../assets/background-image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#configuracoes-usuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px; /* Ajusta a largura máxima */
+    margin: 100px auto; /* Adiciona espaço superior e inferior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+#configuracoes-usuario h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #d9003e;
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #configuracoes-usuario {
+        padding: 15px;
+    }
+}

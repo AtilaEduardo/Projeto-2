@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Usuário</title>
+    <link rel="stylesheet" href="../public/css/RegisterUserStyle.css">
+</head>
+
+<body>
+    <header>
+        <h1>Minha Loja - Cadastro de Cliente</h1>
+        <nav>
+            <ul>
+                <li><a href="profileUser.html">Home</a></li>
+                <li><a href="sales.html">Vendas</a></li>
+                <li><a href="salesHistory.html">Histórico de Vendas</a></li>
+                <li><a href="support.html">Suporte</a></li>
+                <li><a href="settings.html">Atualizar Dados</a></li>
+                <li><a href="login.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="register-container">
+            <h1>Criar Conta</h1>
+            <form id="registerForm">
+                <label for="nameUser">Nome de Usuário:</label>
+                <input type="text" id="nameUser" name="nameUser" required>
+              
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+              
+                <label for="passwordSecurity">Senha de Segurança:</label>
+                <input type="password" id="passwordSecurity" name="passwordSecurity" required>
+              
+                <label for="companyName">Razão Social:</label>
+                <input type="text" id="companyName" name="companyName" required>
+              
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" onblur="validarEmail(this)" required>
+              
+                <label for="telephone">Telefone:</label>
+                <input type="text" id="telephone" name="telephone" maxlength="16" placeholder="(00)00000-0000" required
+                  oninput="mascaraTelefone(this)">
+              
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" maxlength="18" placeholder="00.000.000/0001-00" required required oninput="mascaraCNPJ(this)">
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000" required
+                    oninput="mascaraCEP(this)">
+
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="neighborhood">Bairro:</label>
+                <input type="text" id="neighborhood" name="neighborhood" required>
+
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="uf">UF:</label>
+                <input type="text" id="uf" name="uf" required>
+
+                <label for="isAdm">Administrador:</label>
+                <input type="checkbox" id="isAdm" name="isAdm" onclick="toggleAdminPassword()">
+
+                <div id="adminPasswordSection" style="display:none;">
+                    <label for="adminPassword">Chave de Confirmação:</label>
+                    <input type="password" id="adminPassword" name="adminPassword">
+                </div>
+
+                <input type="submit" value="Registrar">
+            </form>
+        </div>
+    </main>
+
+    <script src="../public/js/RegisterUserMaks.js"></script>
+    <script src="../public/js/RegisterUserScript.js"></script>
+</body>
+
+</html>

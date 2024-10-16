@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Suporte</title>
+    <link rel="stylesheet" href="../public/css/supportStyle.css">
+</head>
+
+<body>
+    <header>
+        <h1>Minha Loja - Suporte ao Cliente</h1>
+        <nav>
+            <ul>
+                <li><a href="profileUser.html">Home</a></li>
+                <li><a href="sales.html">Vendas</a></li>
+                <li><a href="salesHistory.html">Histórico de Vendas</a></li>
+                <li><a href="support_admin.html">Suporte</a></li>
+                <li><a href="settings.html">Atualizar Dados</a></li>
+                <li><a href="login.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Solicitação de Suporte</h2>
+            <form id="supportForm">
+                <label for="userName">Nome:</label>
+                <input type="text" id="userName" name="userName" placeholder="Digite seu nome completo" required>
+
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" name="userEmail" placeholder="Digite seu email" required>
+
+                <label for="supportType">Tipo de Suporte:</label>
+                <select id="supportType" name="supportType" required>
+                    <option value="technical">Suporte Técnico</option>
+                    <option value="billing">Suporte de Pagamento</option>
+                    <option value="general">Suporte Geral</option>
+                </select>
+
+                <label for="description">Descrição:</label>
+                <textarea id="description" name="description" rows="5" placeholder="Descreva o problema" required></textarea>
+
+                <button type="submit">Enviar Solicitação</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../public/js/supportScript.js"></script>
+</body>
+
+</html>
